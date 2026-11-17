@@ -1,0 +1,24 @@
+# Тәуелділіктер — requirements.txt (production) және requirements-dev.txt (линтер, pre-commit).
+# Бұл файлда тек құралдардың баптаулары.
+
+[project]
+name = "kassa-backend"
+version = "1.0.0"
+description = "Дүкен кассасы және қойма есебі: Django REST API (Qoldanba шаблоны)"
+requires-python = ">=3.13"
+
+[tool.ruff]
+line-length = 120
+target-version = "py313"
+extend-exclude = ["kassa/inventory/migrations"]
+
+[tool.ruff.lint]
+# E — PEP 8, F — Pyflakes (қате/қолданылмайтын код), I — импорттар реті, B — bugbear (жиі қателер), DJ — Django
+select = ["E", "F", "I", "B", "DJ"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["config", "kassa"]
+
+[tool.ruff.format]
+# Жоба тарихи түрде бір тырнақшаны қолданады
+quote-style = "single"

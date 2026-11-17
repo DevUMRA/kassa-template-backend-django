@@ -1,0 +1,4 @@
+# Әзірлеуге: линтер/форматтер және git hook-тар. Production бейнесіне кірмейді.
+-r requirements.txt
+pre-commit==4.7.0
+ruff==0.17.5
