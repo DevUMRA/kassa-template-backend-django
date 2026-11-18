@@ -8,7 +8,7 @@ __pycache__/
 *.py[cod]
 
 # Дерекқор көшірмелері (құпия сөз хэштері, токендер бар)
-backups/
+/backups/
 
 # collectstatic нәтижесі
 staticfiles/
